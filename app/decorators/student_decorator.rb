@@ -4,5 +4,13 @@ class StudentDecorator < BaseDecorator
   end
 
   def avg_notes(subject_item)
+    notes = subject_item_notes.select do |note|
+      note.subject_item == subject_item
+    end
+    if notes.size > 0
+      sprintf("%.2f", notes.inject(0.0) { |sum, e| sum + e.value} / notes.size)
+    else
+      "0.00"
+    end
   end
 end
