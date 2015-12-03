@@ -8,6 +8,12 @@ Rails.application.routes.draw do
 
   resources :teachers
 
-  resource :report_subjects
+  controller :reports do
+    get 'reports/subjects' => :subjects
+  end
+
+  resource :student_subjects
+
+  resource :teacher_subjects
 
 end
