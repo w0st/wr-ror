@@ -4,16 +4,21 @@ Rails.application.routes.draw do
 
   root :to => 'visitors#index'
 
-  resources :students
+  resources :students do
+    member do
+      get 'subjects'
+    end
+  end
 
-  resources :teachers
+  resources :teachers do
+    member do
+      get 'subjects'
+    end
+  end
 
   controller :reports do
     get 'reports/subjects' => :subjects
   end
 
-  resource :student_subjects
-
-  resource :teacher_subjects
 
 end
