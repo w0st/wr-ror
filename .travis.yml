@@ -1,6 +1,10 @@
 rvm:
   - 2.2.3
 before_script:
-  - psql -c 'create database workshops_test;' -U postgres
+  - createuser -s workshops
+  - createdb workshops_test
+  - createdb workshops_development
+  - psql -c 'grant all privileges on database workshops_test to workshops'
+  - psql -c 'grant all privileges on database workshops_development to workshops'
 addons:
   postgresql: '9.3'

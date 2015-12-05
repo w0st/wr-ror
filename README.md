@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/w0st/wr-ror.svg)](https://travis-ci.org/w0st/wr-ror)
 RoR Workshops
 ================
 
