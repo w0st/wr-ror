@@ -1,6 +1,6 @@
 puts "Seeds: start"
 TEACHER_TITLES = %w(Dr. Prof. TA)
-SUBJECT_TITLES = %w(Mathematics Software\cEngineering Statistics Philosophy Management)
+SUBJECT_TITLES = %w(Mathematics Software\ Engineering Statistics Philosophy Management)
 DATE_FROM = Date.parse('01-01-1980')
 DATE_TO = Date.parse('31-12-1999')
 User.create!(email: 'admin@admin.com',password: 'adminadmin')
