@@ -13,4 +13,8 @@ class StudentDecorator < BaseDecorator
       "0.00"
     end
   end
+
+  def birthdate_format
+    birthdate.nil? ? "" : birthdate.strftime("%Y-%m_%d")
+  end
 end

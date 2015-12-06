@@ -2,5 +2,6 @@
   = f.input :first_name
   = f.input :last_name
   = f.association :subject_items, label_method: :title, value_method: :id, label: 'Subject Items', as: :check_boxes
+  = f.input :birthdate, as: :bootstrap_datepicker
   = link_to t('shared.back'), students_path, class: 'btn btn-default'
   = f.button :submit
