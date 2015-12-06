@@ -19,6 +19,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'dotenv-rails'
 gem 'gretel'
+gem 'bootstrap-datepicker-rails', '~> 1.3.1'
 
 group :development do
   gem 'better_errors'
