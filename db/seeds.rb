@@ -1,6 +1,8 @@
 puts "Seeds: start"
 TEACHER_TITLES = %w(Dr. Prof. TA)
-SUBJECT_TITLES = %w(Mathematics Software\c Engineering Statistics Philosophy Management)
+SUBJECT_TITLES = %w(Mathematics Software\cEngineering Statistics Philosophy Management)
+DATE_FROM = Date.parse('01-01-1980')
+DATE_TO = Date.parse('31-12-1999')
 User.create!(email: 'admin@admin.com',password: 'adminadmin')
 
 
@@ -23,7 +25,8 @@ end
 25.times do
   Student.create!(
     first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name
+    last_name: Faker::Name.last_name,
+    birthdate: rand(0..3) == 0 ? rand(DATE_FROM .. DATE_TO): nil
   )
 end
 
