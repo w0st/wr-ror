@@ -6,8 +6,8 @@ describe StudentDecorator do
   let(:student_2) {create :student, first_name: 'John', last_name: 'Smith', birthdate: Date.parse('03-04-1981')}
   let(:subject_item) { create :subject_item, teacher: teacher }
   let(:second_subject_item) { create :subject_item }
-  let!(:note_1) { create :subject_item_note, value: 5, student: student, subject_item: second_subject_item }
-  let!(:note_2) { create :subject_item_note, value: 4, student: student, subject_item: second_subject_item }
+  let!(:note_1) { create :subject_item_note, value: 5, student: student_1, subject_item: second_subject_item }
+  let!(:note_2) { create :subject_item_note, value: 4, student: student_1, subject_item: second_subject_item }
 
   describe "#full_name" do
     subject { student_1.decorate.full_name }
